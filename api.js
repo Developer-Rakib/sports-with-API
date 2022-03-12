@@ -4,6 +4,19 @@ let team = document.getElementById("team");
 let inputFeild = document.getElementById("input-feild");
 let load = document.getElementById("loading");
 
+
+// Enter button 
+document.getElementById("input-feild")
+    .addEventListener("keyup", function (event) {
+        event.preventDefault();
+        if (event.key == "Enter") {
+            document.getElementById("search-btn").click();
+        }
+    });
+
+
+
+
 document.getElementById("search-btn").addEventListener("click", () => {
 
     if (isNaN(inputFeild.value) == false || inputFeild.value == "") {
